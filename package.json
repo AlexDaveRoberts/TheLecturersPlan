@@ -1,0 +1,29 @@
+{
+  "name": "thelecturersplan",
+  "version": "1.0.0",
+  "description": "A web application for lecturers to be able to efficiently plan their units, lectures and practicals.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "init": "node init.js"
+  },
+  "keywords": [
+    "Lecturers",
+    "Planner",
+    "Lectures",
+    "Items",
+    "Weeks",
+    "Topics",
+    "Notes",
+    "Resources",
+    "Rooms"
+  ],
+  "author": "UP822938",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-fileupload": "^0.4.0",
+    "file-system": "^2.2.2",
+    "mysql": "^2.15.0"
+  }
+}

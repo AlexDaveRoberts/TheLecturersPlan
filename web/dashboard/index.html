@@ -1,0 +1,52 @@
+<!-- Dashboard HTML -->
+<!DOCTYPE html>
+<html lang='en'>
+<title>The Lecturer's Plan - Dashboard</title>
+<link rel='stylesheet' href='../css/dashboard.css'>
+<link rel='icon' href='../img/favicon.ico'>
+<meta charset='UTF-8'>
+
+<!-- If user is not logged in, redirect to Login -->
+<script>
+const loggedIn = localStorage.getItem('login');
+if (loggedIn != 'true') { window.location.replace('../'); }
+</script>
+
+<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+
+<main>
+
+  <!-- Title Header -->
+  <h1 id='titleHeader'><div id='container'><div id='logo'></div><input type='text' placeholder='Search...' id='search' autocomplete='off'></div><span id='addWeek'>Add Week <i class='fas fa-plus'></i></span></h1>
+
+  <!-- Sidebar -->
+  <label id='menu'><i class='fas fa-bars'></i></label>
+  <aside id='sidebar'>
+    <span id='currentUser'></span>
+    <span id='home'><i class='fas fa-home sidebarIcons'></i>Home</span>
+    <span id='allUnits'><i class='fas fa-th-list sidebarIcons'></i>Units</span>
+    <span id='allTopics'><i class='fas fa-comment sidebarIcons'></i>All Topics</span>
+    <span id='allNotes'><i class='fas fa-sticky-note sidebarIcons'></i>All Notes</span>
+    <span id='allResources'><i class='fas fa-folder sidebarIcons'></i>All Resources</span>
+    <span id='allLecturers'><i class='fas fa-user sidebarIcons'></i>All Lecturers</span>
+    <span id='allRooms'><i class='fas fa-building sidebarIcons'></i>All Rooms</span>
+    <span id='help'><i class='fas fa-question-circle sidebarIcons'></i>Help</span>
+    <footer>Copyright &copy; 2018 UP822938 | <a href='privacy'>Privacy</a></footer>
+  </aside>
+
+  <!-- Items Header -->
+  <h1 id='itemsHeaderLeft'><span id='newItemMenu'>New Item <i class='fas fa-angle-down'></i></span><div id='itemMenu'><p id='newTopic'>New Topic</p><p id='newNote'>New Note</p><p id='newResource'>New Resource</p><p id='addLecturer'>Add Lecturer</p><p id='addRoom'>Add Room</p></div><label id='currentUnit'>Current Unit: </label></h1>
+
+  <h1 id='itemsHeaderRight'><label id='logout'>Logout</label></h1>
+
+  <!-- Week section -->
+  <section id='weeksMain'></section>
+
+  <!-- Items section -->
+  <section id='items' ondrop='dropItem(event)' ondragover='allowDrop(event)'></section>
+</main>
+
+<!-- Dashboard JS -->
+<script src='../js/dashboard.js'></script>
+
+</html>

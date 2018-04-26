@@ -1,0 +1,63 @@
+<!-- Registration HTML -->
+<!DOCTYPE html>
+<html lang='en'>
+<title>The Lecturer's Plan - Register</title>
+<link rel='stylesheet' href='../css/register.css'>
+<link rel='icon' href='../img/favicon.ico'>
+<meta charset='UTF-8'>
+
+<!-- If user is logged in, redirect to Dashboard -->
+<script>
+const loggedIn = localStorage.getItem('login');
+if (loggedIn == 'true') { window.location.replace('../dashboard'); }
+</script>
+
+<section id='mainSection'>
+
+  <!-- Registration Form -->
+  <section id='registerSection'>
+    <h1>The Lecturer's Plan<span> – Register<span></h1>
+
+    <p id='name'>
+      <label for='nameInput'>Name:</label><input type='text' id='nameInput' class='input' autofocus>
+    </p>
+
+    <p id='nameValidation' class='validation'></p>
+
+    <p id='email'>
+      <label for='emailInput'>Email:</label><input type='text' id='emailInput' class='input'>
+    </p>
+
+    <p id='emailValidation' class='validation'></p>
+
+    <p id='password'>
+      <label for='passwordInput'>Password:</label><input type='password' id='passwordInput' class='input'>
+    </p>
+
+    <p id='passwordValidation' class='validation'></p>
+
+    <p id='unit'>
+      <label for='unitInput'>Unit Name:</label><input type='text' id='unitInput' class='input'>
+    </p>
+
+    <p id='unitValidation' class='validation'></p>
+
+    <p id='weeks'>
+      <label for='weeksInput'>Number of Weeks:</label><input type='text' id='weeksInput' class='input'>
+    </p>
+
+    <p id='weeksValidation' class='validation'></p>
+
+    <p id='register'>
+      <input type='submit' id='registerSubmit' value='Register'>
+    </p>
+
+    <p id='invalidRegister'></p>
+  </section>
+
+</section>
+
+<!-- Register JS -->
+<script src='../js/register.js'></script>
+
+</html>

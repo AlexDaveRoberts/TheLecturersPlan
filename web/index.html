@@ -1,0 +1,62 @@
+<!-- Login HTML -->
+<!DOCTYPE html>
+<html lang='en'>
+<title>The Lecturer's Plan - Login</title>
+<link rel='stylesheet' href='css/login.css'>
+<link rel='icon' href='img/favicon.ico'>
+<meta charset='UTF-8'>
+
+<!-- If user is logged in, redirect to Dashboard -->
+<script>
+const loggedIn = localStorage.getItem('login');
+if (loggedIn == 'true') { window.location.replace('dashboard'); }
+</script>
+
+<main>
+
+  <!-- Login Form -->
+  <section id='titleHeaderLeft'>
+    <p id='logo'></p>
+
+    <p id='email'>
+      <label for='emailInput'>Email:</label><input type='text' id='emailInput' class='input' autofocus>
+    </p>
+
+    <p id='password'>
+      <label for='passwordInput'>Password:</label><input type='password' id='passwordInput' class='input'>
+    </p>
+
+    <p id='login'>
+      <input type='submit' id='loginSubmit' value='Login'>
+    </p>
+
+    <p id='invalidLogin'></p>
+  </section>
+
+  <section id='titleHeaderRight'>
+    <a href='register'>Register</a>
+  </section>
+
+  <!-- Overview section -->
+  <section id='overview'>
+    <!-- Left column -->
+    <article>
+      <p id='weeks'>
+      <p id='desc2'><strong>Items View</strong> - View all of the items that you have created previously, and be able to create new items to be dragged and dropped into weeks. Files can also be uploaded to the server as resources.</p>
+      <p id='units'></p>
+    </article>
+
+    <!-- Right column -->
+    <article>
+      <p id='desc1'><strong>Weeks View</strong> - View all of the teaching weeks for the year in a scrollable column, with the option to expand and collapse weeks to view only the weeks you want, and having every week contain the content that you require.</p>
+      <p id='items'>
+      <p id='desc3'><strong>Units Section</strong> - View all of the units associated with your account, and be able to change to a unit you wish to view. Unit information is listed next to each unit, giving you an overview at a glance.</p>
+    </article>
+  </section>
+
+</main>
+
+<!-- Login JS -->
+<script src='js/login.js'></script>
+
+</html>

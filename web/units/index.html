@@ -1,0 +1,76 @@
+<!-- Units HTML -->
+<!DOCTYPE html>
+<html lang='en'>
+<title>The Lecturer's Plan - Units</title>
+<link rel='stylesheet' href='../css/units.css'>
+<link rel='icon' href='../img/favicon.ico'>
+<meta charset='UTF-8'>
+
+<!-- If user is not logged in, redirect to Login -->
+<script>
+const loggedIn = localStorage.getItem('login');
+if (loggedIn != 'true') { window.location.replace('../'); }
+</script>
+
+<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+
+<main>
+
+  <!-- Title Header -->
+  <h1 id='titleHeaderLeft'><div id='container'><div id='logo'></div><input type='text' placeholder='Search...' id='search' autocomplete='off'></div></h1>
+  <h1 id='titleHeaderRight'><label id='logout'>Logout</label></h1>
+
+  <!-- Sidebar -->
+  <label id='menu'><i class='fas fa-bars'></i></label>
+  <aside id='sidebar'>
+    <span id='currentUser'></span>
+    <span id='home'><i class='fas fa-home sidebarIcons'></i>Home</span>
+    <span id='allUnits'><i class='fas fa-th-list sidebarIcons'></i>Units</span>
+    <span id='allTopics'><i class='fas fa-comment sidebarIcons'></i>All Topics</span>
+    <span id='allNotes'><i class='fas fa-sticky-note sidebarIcons'></i>All Notes</span>
+    <span id='allResources'><i class='fas fa-folder sidebarIcons'></i>All Resources</span>
+    <span id='allLecturers'><i class='fas fa-user sidebarIcons'></i>All Lecturers</span>
+    <span id='allRooms'><i class='fas fa-building sidebarIcons'></i>All Rooms</span>
+    <span id='help'><i class='fas fa-question-circle sidebarIcons'></i>Help</span>
+    <footer>Copyright &copy; 2018 UP822938 | <a href='privacy'>Privacy</a></footer>
+  </aside>
+
+  <!-- Units section -->
+  <section id='unitsSection'>
+    <section id='unitsList'>
+      <article id='changeUnit'>
+      <h2>Change Unit</h2>
+      <h3>Select unit to view:</h3>
+      <ul id='unitItemsList'>
+      </ul>
+    </article><article id='unitInformation'>
+        <h2>Unit Information</h2>
+        <p id='unitCreated'><label>Created: </label></p>
+        <p id='numOfWeeks'><label>Weeks: </label></p>
+        <p id='numOfTopics'><label>Topics: </label></p>
+        <p id='numOfNotes'><label>Notes: </label></p>
+        <p id='numOfResources'><label>Resources: </label></p>
+        <p id='numOfLecturers'><label>Lecturers: </label></p>
+        <p id='numOfRooms'><label>Rooms: </label></p>
+        <p id='numOfFiles'><label>Files: </label></p>
+      </article><article id='filesList'>
+        <h2>Files</h2>
+      </article>
+    </section>
+    <section id='addNewUnit'>
+      <h2>Add New Unit</h2>
+      <p>
+        <label for='newUnit' id='newUnitLabel'>New Unit:</label><input type='text' placeholder='Unit name...' autocomplete='off' id='newUnit'>
+      </p>
+      <p>
+        <label for='newNumberOfWeeks' id='newNumberOfWeeksLabel'>Number of Weeks:</label><input type='text' placeholder='Number of weeks...' autocomplete='off' id='newNumberOfWeeks'>
+      </p>
+      <input type='submit' id='addUnit' value='Add'>
+    </section>
+  </section>
+</main>
+
+<!-- Units JS -->
+<script src='../js/units.js'></script>
+
+</html>

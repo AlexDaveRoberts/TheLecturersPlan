@@ -1,0 +1,69 @@
+<!-- Help HTML -->
+<!DOCTYPE html>
+<html lang='en'>
+<title>The Lecturer's Plan - Help</title>
+<link rel='stylesheet' href='../css/help.css'>
+<link rel='icon' href='../img/favicon.ico'>
+<meta charset='UTF-8'>
+
+<!-- If user is not logged in, redirect to Login -->
+<script>
+const loggedIn = localStorage.getItem('login');
+if (loggedIn != 'true') { window.location.replace('../'); }
+</script>
+
+<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+
+<main>
+
+  <!-- Title Header -->
+  <h1 id='titleHeaderLeft'><div id='container'><div id='logo'></div><input type='text' placeholder='Search...' id='search' autocomplete='off'></div></h1>
+  <h1 id='titleHeaderRight'><label id='logout'>Logout</label></h1>
+
+  <!-- Sidebar -->
+  <label id='menu'><i class='fas fa-bars'></i></label>
+  <aside id='sidebar'>
+    <span id='currentUser'></span>
+    <span id='home'><i class='fas fa-home sidebarIcons'></i>Home</span>
+    <span id='allUnits'><i class='fas fa-th-list sidebarIcons'></i>Units</span>
+    <span id='allTopics'><i class='fas fa-comment sidebarIcons'></i>All Topics</span>
+    <span id='allNotes'><i class='fas fa-sticky-note sidebarIcons'></i>All Notes</span>
+    <span id='allResources'><i class='fas fa-folder sidebarIcons'></i>All Resources</span>
+    <span id='allLecturers'><i class='fas fa-user sidebarIcons'></i>All Lecturers</span>
+    <span id='allRooms'><i class='fas fa-building sidebarIcons'></i>All Rooms</span>
+    <span id='help'><i class='fas fa-question-circle sidebarIcons'></i>Help</span>
+    <footer>Copyright &copy; 2018 UP822938 | <a href='privacy'>Privacy</a></footer>
+  </aside>
+
+  <!-- Help section -->
+  <section id='helpSection'>
+    <article>
+      <h2>Help</h2>
+      <h3>Keyboard Shortcuts</h3>
+      <p>Throughout the application keyboard shortcuts have been implemented as a means to interact with the interface without the need of a pointing device. This ensures that the application is accessible to a diverse audience. The following keyboard shortcuts have been embedded into the system - </p>
+      <p><strong>CTRL+F</strong> - Focuses on the search field, allowing for keywords to be searched.</p>
+      <p><strong>CTRL+D</strong> - Redirects back to the main dashboard.</p>
+      <p><strong>CTRL+M</strong> - Toggles the sidebar menu, allowing access to the different pages.</p>
+      <p><strong>CTRL+U</strong> - Loads the unit section with unit information, and the ability to add a new unit.</p>
+      <p><strong>CTRL+H</strong> - Loads the help section with informative information about the system.</p>
+      <p><strong>CTRL+W</strong> - Adds a new week to the weeks column on the main dashboard.</p>
+      <p><strong>CTRL+I</strong> - Toggles the item menu, listing the different types of items that can be created.</p>
+      <p><strong>CTRL+L</strong> - Logouts of the system, redirects back to the landing page.</p>
+      <h3 class='subHeading'>Main Dashboard</h3>
+      <p>The main dashboard is the first interface that is displayed after logging in to the system. It is separated into two parts, the weeks column and the items section.
+      The weeks column displays the number of weeks that was created on unit creation, and any new weeks created by the user clicking 'Add Week'. These weeks can be expanded and collapsed to only have viewable the weeks needed.</p>
+      <p>The items section contains all of the items that has been created by the user, this includes topics, notes, resources, lecturers and rooms. Every item (apart from resources) has a text field where text content can be added, with every item automatically saving the data added to it as the user types. The resource item includes a file upload service, where the user can upload a file / resource to be accessible on the server.</p>
+      <p>Items can be dragged and dropped from the items section to any of the weeks and vice-versa. Multiple items can be dragged into a single week, allowing lecturers to plan their weeks accordingly.</p>
+      <h3 class='subHeading'>Units</h3>
+      <p>The units page is accessible from the sidebar by clicking on the menu icon in the top left, or by CTRL+U with the keyboard to go directly to the page. The Change Unit section allows a user to switch between the units that they have created, and to be able to view an overview of each unit, with its creation date, number of weeks, the number of each different type of item, and number of files displayed next to the units. The interface will also list every file uploaded to the unit, with links given to each file.</p>
+      <p>Also available on Units is the ability for a user to create and add a new unit to their account by simply typing in a name for the unit, and the number of weeks that they require, and clicking 'Add'.</p>
+      <h3 class='subHeading'>Search</h3>
+      <p>Located within the title bar the user has access to a search field, and by entering in keywords the search algorithm will match these with the best results and display them to the user. Additionally, the user has access to view the type of items they wish to look at, either by searching for the item type, e.g. 'notes', or by selecting the item type page from the sidebar, e.g. 'All Lecturers'.</p>
+    </article>
+  </section>
+</main>
+
+<!-- Help JS -->
+<script src='../js/help.js'></script>
+
+</html>
